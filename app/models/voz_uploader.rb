@@ -1,0 +1,2 @@
+class VozUploader < Shrine
+end

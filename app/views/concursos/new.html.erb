@@ -1,0 +1,61 @@
+<br><br><br><br><br>
+
+<div class="container">
+  <h2>Crear un nuevo concurso</h2>
+  <p>Ingrese la información requerida en el formulario.</p>
+  <div>
+  	<button type="button" class="btn btn-success" onclick="javascript: document.location = '/concursos' ">Inicio</button>
+  	<br><br>
+  </div>
+  <div class="table-responsive">                   
+<%= form_for :concurso, :html => {multipart: true}, url: concursos_path do |f| %>
+<div class='col-sm-12'>
+	<div class="form-group col-sm-6">
+		<%= f.label :nombreConcurso, 'Nombre del evento' %><br>
+		<%= f.text_field :nombreConcurso,  class: 'form-control', placeholder: "Ingrese el nombre del concurso...", :required => true %>
+	</div>	
+
+	<div class="form-group col-sm-6">
+		<%= f.label :fechaInicio, 'Fecha de inicio' %>
+		<%= f.date_field :fechaInicio, class: 'form-control', :required => true %>
+	</div>
+	
+	<div class="form-group col-sm-6">
+		<%= f.label :fechaFin, 'Fecha de finalización' %>
+		<%= f.date_field :fechaFin, class: 'form-control', :required => true %>	
+	</div>
+	
+	<div class="form-group col-sm-6">
+		<%= f.label :valorPagar, 'Valor a pagar'  %>
+		<%= f.text_field :valorPagar,  class: 'form-control', placeholder: "Ingrese el valor a pagar al ganador...", :required => true %>
+	</div>
+	
+	<div class="form-group col-sm-12">
+		<%= f.label :'recomendaciones' %>
+		<%= f.text_area :recomendaciones, class: 'form-control', placeholder: "Ingrese las recomendaciones a seguir por los locutores...", :required => true %>	
+	</div>
+	
+	<div class="form-group col-sm-12">
+		<%= f.label :'Guión del Concurso' %>
+		<%= f.text_area :guionConcurso, class: 'form-control', placeholder: "Ingrese guión que deberá expresar la voz...", :required => true %>	
+	</div>
+	
+	<div class="form-group col-sm-6">
+		<%= f.label :image, 'Imagen' %>
+		<%= f.hidden_field :image, value: @concursos.cached_image_data %>
+		<%= f.file_field :image, :required => true %>
+	</div>
+	
+	<div class="form-group col-sm-6">
+		<%= f.label :concursoURL, 'URL del concurso' %>
+		<%= f.text_field :concursoURL,  class: 'form-control', placeholder: "Ingrese la URL para acceder al concurso...", :required => true %>
+	</div>
+
+	<div class="form-group col-sm-12">
+		<%= f.submit 'Crear concurso', :class=>'btn btn-danger' %>
+		<button type="button" class="btn btn-primary" onclick="javascript: document.location = '/events' ">Volver</button>
+	</div>
+</div>
+<% end %>
+</div>
+</div>

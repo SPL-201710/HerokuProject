@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Concurso:</strong>
+  <%= @vocess_locutor.concurso %>
+</p>
+
+<p>
+  <strong>Nombreslocutor:</strong>
+  <%= @vocess_locutor.nombresLocutor %>
+</p>
+
+<p>
+  <strong>Apellidoslocutor:</strong>
+  <%= @vocess_locutor.apellidosLocutor %>
+</p>
+
+<p>
+  <strong>Emaillocutor:</strong>
+  <%= @vocess_locutor.emailLocutor %>
+</p>
+
+<p>
+  <strong>Originalurl:</strong>
+  <%= @vocess_locutor.originalURL %>
+</p>
+
+<p>
+  <strong>Convertidaurl:</strong>
+  <%= @vocess_locutor.convertidaURL %>
+</p>
+
+<p>
+  <strong>Comentarios:</strong>
+  <%= @vocess_locutor.comentarios %>
+</p>
+
+<p>
+  <strong>Estado:</strong>
+  <%= @vocess_locutor.estado %>
+</p>
+
+<%= link_to 'Edit', edit_vocess_locutor_path(@vocess_locutor) %> |
+<%= link_to 'Back', vocess_locutors_path %>

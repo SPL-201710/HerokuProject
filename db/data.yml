@@ -1,0 +1,871 @@
+
+---
+administrators:
+  columns:
+  - id
+  - email
+  - encrypted_password
+  - reset_password_token
+  - reset_password_sent_at
+  - remember_created_at
+  - sign_in_count
+  - current_sign_in_at
+  - last_sign_in_at
+  - current_sign_in_ip
+  - last_sign_in_ip
+  - nombres
+  - apellidos
+  - nombreEmpresa
+  - created_at
+  - updated_at
+  records: 
+  - - 1
+    - wilmermontero@gmail.com
+    - "$2a$11$Pf.E3nlPv3tutTl0QEuDBuzZSguNO626Xcudam3uv.IKYH.B0m1lW"
+    - 
+    - 
+    - 
+    - 9
+    - '2018-03-04 22:03:23.436038'
+    - '2018-03-04 21:40:28.156706'
+    - 190.24.23.155
+    - 190.24.23.155
+    - Wilmer
+    - Montero
+    - Witzgand S.A.S
+    - '2018-02-27 05:23:55.578704'
+    - '2018-03-04 22:03:23.437727'
+  - - 2
+    - gchicaduque@gmail.com
+    - "$2a$11$7tXj.t7uUT1VxBipBy0o4.WpkNlopAHJQNqx3HRuQ.Ok.FvSVx8rG"
+    - 
+    - 
+    - 
+    - 51
+    - '2018-03-13 01:52:00.009260'
+    - '2018-03-12 04:52:21.268198'
+    - 181.61.49.164
+    - 181.61.49.164
+    - German Andres
+    - Chica Duque
+    - Uniandes
+    - '2018-02-27 05:54:24.805368'
+    - '2018-03-13 01:52:00.010844'
+  - - 3
+    - admin@gargolas.net.co
+    - "$2a$11$DOP.K51Qaj2Sqr6g9I.6xukSc926.4DT2Ztz.7B80fRxkmp0Kpl6i"
+    - 
+    - 
+    - 
+    - 5
+    - '2018-03-09 01:21:47.812406'
+    - '2018-03-09 00:27:44.425750'
+    - 157.253.201.169
+    - 157.253.23.182
+    - Carlos
+    - Moreno Ibarguen
+    - Gargolas
+    - '2018-02-27 14:50:52.242044'
+    - '2018-03-09 01:21:47.813705'
+  - - 4
+    - ju@ju.com
+    - "$2a$11$giprUro/26izg1POcb3xmucxgxnniZgc1/BmVqK4SqZDm/eYTZvj."
+    - 
+    - 
+    - 
+    - 1
+    - '2018-03-04 21:42:47.275883'
+    - '2018-03-04 21:42:47.275883'
+    - 190.24.23.155
+    - 190.24.23.155
+    - juan
+    - gomez
+    - kijuhu
+    - '2018-03-04 21:42:47.267282'
+    - '2018-03-04 21:42:47.276818'
+  - - 5
+    - a@a.com
+    - "$2a$11$HSvHj2lxQgST1TujVZYxmuRBolZXFFTlmPMmYH9Z8Kbcm1EsxFcaa"
+    - 
+    - 
+    - 
+    - 1
+    - '2018-03-04 23:15:00.815289'
+    - '2018-03-04 23:15:00.815289'
+    - 190.24.23.155
+    - 190.24.23.155
+    - Rosa
+    - Lopez
+    - rositas BBQ
+    - '2018-03-04 23:15:00.805136'
+    - '2018-03-04 23:15:00.816241'
+  - - 6
+    - ck1nt0@gmail.com
+    - "$2a$11$uDGwPl.hLJST.RlZvfLLvuKi7KKGGrNuilZSvIRtBKo94FAhOTrqq"
+    - 
+    - 
+    - 
+    - 1
+    - '2018-03-09 01:19:06.385590'
+    - '2018-03-09 01:19:06.385590'
+    - 157.253.201.169
+    - 157.253.201.169
+    - Rogelio
+    - Perez
+    - Virtual
+    - '2018-03-09 01:19:06.376389'
+    - '2018-03-09 01:19:06.386313'
+  - - 7
+    - chicaduque@hotmail.com
+    - "$2a$11$xJZ71SdC2lX7aZzUYBLXO.ON5gz/ranoSCk7HU69UrwLJoD4CUGpS"
+    - 
+    - 
+    - 
+    - 2
+    - '2018-03-10 16:24:29.052801'
+    - '2018-03-10 16:23:50.281121'
+    - 181.61.49.164
+    - 181.61.49.164
+    - German Andres
+    - Chica Duque
+    - Uniandes
+    - '2018-03-10 16:23:50.271195'
+    - '2018-03-10 16:24:29.054305'
+
+---
+ar_internal_metadata:
+  columns:
+  - key
+  - value
+  - created_at
+  - updated_at
+  records: 
+  - - environment
+    - development
+    - '2018-02-27 03:02:47.867079'
+    - '2018-02-27 03:02:47.867079'
+
+---
+concursos:
+  columns:
+  - id
+  - nombreConcurso
+  - fechaInicio
+  - fechaFin
+  - valorPagar
+  - recomendaciones
+  - guionConcurso
+  - imageBanner
+  - concursoURL
+  - created_at
+  - updated_at
+  - administrator_id
+  - image_data
+  records: 
+  - - 1
+    - Mi primer concurso - Uniandes
+    - '2018-02-07 00:00:00'
+    - '2018-02-08 00:00:00'
+    - 123000
+    - mmm
+    - nnnn
+    - jjjj
+    - uuuuu
+    - '2018-02-27 05:25:03.042988'
+    - '2018-02-27 13:45:39.763877'
+    - 1
+    - 
+  - - 3
+    - Prueba funcional
+    - '2018-12-31 00:00:00'
+    - '2018-12-31 00:00:00'
+    - 7000
+    - m
+    - m
+    - m
+    - m
+    - '2018-02-27 05:36:19.431389'
+    - '2018-03-04 16:49:21.363198'
+    - 1
+    - 
+  - - 4
+    - Prueba de edición
+    - '2018-12-30 00:00:00'
+    - '2018-12-31 00:00:00'
+    - 123000
+    - a
+    - a
+    - a
+    - a
+    - '2018-02-27 05:40:51.396972'
+    - '2018-02-27 13:41:35.630455'
+    - 1
+    - 
+  - - 5
+    - PRUEBA FUNCIONAL
+    - '2017-11-30 00:00:00'
+    - '2017-11-30 00:00:00'
+    - 7000
+    - uno
+    - dos
+    - imagen
+    - asdasdasd
+    - '2018-02-27 05:54:07.748250'
+    - '2018-02-27 05:54:07.748250'
+    - 1
+    - 
+  - - 6
+    - test1
+    - '2018-02-02 00:00:00'
+    - '2018-02-17 00:00:00'
+    - 150000
+    - ninguna
+    - mo hay
+    - 
+    - url
+    - '2018-02-27 20:16:01.939199'
+    - '2018-03-09 01:22:06.307899'
+    - 3
+    - '{"id":"db5100c603dda6c0775d297429e1df3a.jpg","storage":"store","metadata":{"filename":"0-1-e1490268908256.jpg","size":33043,"mime_type":"image/jpeg"}}'
+  - - 7
+    - Mi primer concurso
+    - '2017-11-30 00:00:00'
+    - '2017-11-30 00:00:00'
+    - 250000
+    - sdasdsadjkb
+    - kjnasdk sa jdasjd kadj ak
+    - asdasdasd
+    - sdsadsa
+    - '2018-03-04 21:49:31.550929'
+    - '2018-03-04 21:49:31.550929'
+    - 4
+    - 
+  - - 8
+    - Mi primer concurso
+    - '2016-11-30 00:00:00'
+    - '2017-11-30 00:00:00'
+    - 9999
+    - recomendaciones
+    - guion
+    - "#<ActionDispatch::Http::UploadedFile:0x007ff0c160d740>"
+    - URL automatica
+    - '2018-03-04 23:15:47.812327'
+    - '2018-03-04 23:15:47.812327'
+    - 5
+    - 
+  - - 9
+    - Dos
+    - '2018-11-30 00:00:00'
+    - '2018-11-30 00:00:00'
+    - 6666
+    - sdsd
+    - asdasdasd
+    - "#<ActionDispatch::Http::UploadedFile:0x007feaa5f75688>"
+    - ad
+    - '2018-03-05 03:50:59.047956'
+    - '2018-03-05 03:50:59.047956'
+    - 5
+    - 
+  - - 10
+    - Concurso de comerciales
+    - '2018-03-01 00:00:00'
+    - '2018-03-31 00:00:00'
+    - 1000000
+    - Hacer pruebas preliminares
+    - La voz de la nueva generacion
+    - 
+    - Concurso_comerciales_1
+    - '2018-03-06 01:42:30.948803'
+    - '2018-03-10 06:54:19.971344'
+    - 2
+    - '{"id":"f36f8e33a24beb1a01482a2ad88c480f.jpg","storage":"store","metadata":{"filename":"Cobertizo.jpg","size":176398,"mime_type":"image/jpeg"}}'
+  - - 12
+    - Ninja
+    - '2018-03-03 00:00:00'
+    - '2018-03-31 00:00:00'
+    - 250000
+    - 'nonguna '
+    - Suerte
+    - "#<ActionDispatch::Http::UploadedFile:0x007fbee0c2d138>"
+    - url
+    - '2018-03-08 07:22:14.675119'
+    - '2018-03-08 07:22:14.675119'
+    - 3
+    - 
+  - - 14
+    - Concurso de comerciales 3
+    - '2018-03-08 00:00:00'
+    - '2018-03-24 00:00:00'
+    - 100000
+    - Pruebas iniciales
+    - Nuevas tendencias
+    - 
+    - Concurso_comerciales_3
+    - '2018-03-08 07:25:13.921056'
+    - '2018-03-08 10:22:37.600648'
+    - 2
+    - 
+  - - 15
+    - Concurso de comerciales 3
+    - '2018-03-08 00:00:00'
+    - '2018-03-24 00:00:00'
+    - 100000
+    - Pruebas iniciales ahora
+    - Nuevas tendencias
+    - ghfhgfhf
+    - Concurso de comerciales 3
+    - '2018-03-08 07:25:54.608479'
+    - '2018-03-08 07:27:58.563901'
+    - 2
+    - 
+  - - 16
+    - Concurso de comerciales 4
+    - '2018-03-08 00:00:00'
+    - '2018-03-10 00:00:00'
+    - 100000
+    - Recomendaciones
+    - Guion del concurso
+    - 
+    - Concurso de comerciales 4
+    - '2018-03-08 09:26:11.126470'
+    - '2018-03-08 09:26:11.126470'
+    - 2
+    - 
+  - - 17
+    - Concurso de comerciales 5
+    - '2018-03-17 00:00:00'
+    - '2018-03-25 00:00:00'
+    - 200000
+    - Recomendaciones
+    - Guion del concurso
+    - "/vocesLoaded/store/c6a88456a03a656571643802a253a0b8.jpg"
+    - Concurso_comerciales_5
+    - '2018-03-08 10:26:27.203711'
+    - '2018-03-10 13:12:29.313616'
+    - 2
+    - '{"id":"e2f54fb7d22a39b3598ad1cc6a3616cc.jpg","storage":"store","metadata":{"filename":"Puesta
+      de sol.jpg","size":71189,"mime_type":"image/jpeg"}}'
+  - - 18
+    - Concurso de comerciales 6
+    - '2018-03-08 00:00:00'
+    - '2018-03-17 00:00:00'
+    - 200000
+    - Recomendaciones
+    - Guion del concurso
+    - "/vocesLoaded/cache/4fab153c465a3a0c2dfa6329144ba76d.jpg"
+    - Concurso_comerciales_6
+    - '2018-03-08 10:33:35.445558'
+    - '2018-03-08 10:33:35.458017'
+    - 2
+    - '{"id":"16c05cdbe4ab1cd55b776aba6bad4fd1.jpg","storage":"store","metadata":{"filename":"Vinca.jpg","size":121290,"mime_type":"image/jpeg"}}'
+  - - 20
+    - Concurso de comerciales 2
+    - '2018-03-02 00:00:00'
+    - '2018-03-16 00:00:00'
+    - 200000
+    - Recomendaciones
+    - Guion del concurso
+    - "/vocesLoaded/cache/cea36c49c70e2ffe13fe5cca92e8c995.jpg"
+    - Concurso_comerciales_2
+    - '2018-03-09 23:41:18.998798'
+    - '2018-03-09 23:41:19.012318'
+    - 2
+    - '{"id":"90ed50dd17fb60ed04b411a46f327bc1.jpg","storage":"store","metadata":{"filename":"photo_2.jpg","size":15432,"mime_type":"image/jpeg"}}'
+  - - 21
+    - Concurso de comerciales 7
+    - '2018-03-10 05:00:00'
+    - '2018-03-31 05:00:00'
+    - 5000000
+    - "Debe seguir las siguientes indicaciones.\r\n1. Leer libreto\r\n2. Grabar su
+      voz.\r\n3. Esperar correo."
+    - "Soy un locutor que promociono productos de alta calidad y buenos precios.\r\nSolo
+      lo mejor para todos.\r\nNo hay mejor producto."
+    - "/vocesLoaded/store/7997c2d3c771c056431f1f5b5ddb40a8.mp4"
+    - Concurso de comerciales 7
+    - '2018-03-10 15:40:51.600974'
+    - '2018-03-10 15:41:32.102115'
+    - 2
+    - '{"id":"0feea33d71c1b6ce1ea2e130d86427ae.jpg","storage":"store","metadata":{"filename":"Henry.jpg","size":9938,"mime_type":"image/jpeg"}}'
+
+---
+vocess_locutors:
+  columns:
+  - id
+  - concurso_id
+  - nombresLocutor
+  - apellidosLocutor
+  - emailLocutor
+  - originalURL
+  - convertidaURL
+  - comentarios
+  - estado
+  - created_at
+  - updated_at
+  - voz_data
+  records: 
+  - - 1
+    - 1
+    - uyyyy
+    - uuuuuu
+    - jmmm@dasd.com
+    - adasdasd
+    - ''
+    - dsdfsdfsdf
+    - En proceso
+    - '2018-02-28 02:27:36.631207'
+    - '2018-02-28 02:27:36.631207'
+    - 
+  - - 2
+    - 4
+    - mn
+    - m
+    - mn@asd.coma
+    - mnmn
+    - ''
+    - mnmn
+    - En proceso
+    - '2018-02-28 02:33:31.516628'
+    - '2018-02-28 02:40:55.168989'
+    - 
+  - - 3
+    - 1
+    - PETER
+    - PAN
+    - PETER@PETER.COM
+    - OASOSADO
+    - ''
+    - QSLDOSDFSO
+    - En proceso
+    - '2018-03-02 18:36:01.011944'
+    - '2018-03-02 18:36:01.011944'
+    - 
+  - - 4
+    - 1
+    - hhhhh
+    - hh
+    - hhh
+    - h
+    - ''
+    - hh
+    - En proceso
+    - '2018-03-02 18:37:01.698265'
+    - '2018-03-02 18:37:01.698265'
+    - 
+  - - 5
+    - 5
+    - Wilmer
+    - Montero
+    - wilmermontero@gmail.com
+    - Original
+    - ''
+    - comentario
+    - En proceso
+    - '2018-03-02 18:41:45.525736'
+    - '2018-03-02 18:41:45.525736'
+    - 
+  - - 6
+    - 5
+    - Felipe
+    - mn
+    - mn
+    - mn
+    - ''
+    - mn
+    - En proceso
+    - '2018-03-02 18:54:33.719162'
+    - '2018-03-02 18:54:33.719162'
+    - 
+  - - 7
+    - 10
+    - German
+    - Chica
+    - chicaduque@gmail.com
+    - ''
+    - ''
+    - ''
+    - En proceso
+    - '2018-03-06 03:42:53.138103'
+    - '2018-03-06 03:42:53.138103'
+    - 
+  - - 8
+    - 20
+    - German
+    - Chica
+    - chicaduque@gmail.com
+    - ''
+    - 
+    - ''
+    - En proceso
+    - '2018-03-06 03:43:16.432986'
+    - '2018-03-06 03:43:16.432986'
+    - 
+  - - 9
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - ''
+    - 
+    - Prueba final
+    - En proceso
+    - '2018-03-06 03:51:36.442101'
+    - '2018-03-06 03:51:36.442101'
+    - 
+  - - 10
+    - 10
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - 
+    - ''
+    - Prueba
+    - En proceso
+    - '2018-03-06 04:59:27.164883'
+    - '2018-03-06 04:59:27.164883'
+    - 
+  - - 11
+    - 10
+    - German
+    - Chica
+    - ''
+    - 
+    - ''
+    - Final
+    - En proceso
+    - '2018-03-06 05:04:58.280964'
+    - '2018-03-06 05:04:58.280964'
+    - 
+  - - 12
+    - 20
+    - German
+    - Chica
+    - ''
+    - 
+    - 
+    - Alternativa
+    - En proceso
+    - '2018-03-06 05:07:03.758206'
+    - '2018-03-06 05:07:03.773202'
+    - '{"id":"6797922647aea97797042286be16e991.mp3","storage":"store","metadata":{"filename":"A
+      UNOS OJOS.mp3","size":3027329,"mime_type":"audio/mp3"}}'
+  - - 13
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/22bc64cb47021013ef98a2e57b6254b6.mp3"
+    - 
+    - FIN FIN
+    - En proceso
+    - '2018-03-06 05:14:29.397891'
+    - '2018-03-06 05:14:29.412296'
+    - '{"id":"c148ec79adbba2062d0db9bd9b708f46.mp3","storage":"store","metadata":{"filename":"A
+      Media Luz.mp3","size":2457644,"mime_type":"audio/mp3"}}'
+  - - 14
+    - 20
+    - 'Angélica '
+    - Torres
+    - ck1nt0@gmail.com
+    - "/vocesLoaded/cache/edfe1fdbc106a5e68e69397c609c5b84.mp3"
+    - 
+    - Esta es mi propuesta.
+    - En proceso
+    - '2018-03-06 16:07:32.516124'
+    - '2018-03-06 16:07:32.527919'
+    - '{"id":"b5f2cd50f74a24850176527e572d7666.mp3","storage":"store","metadata":{"filename":"mpthreetest.mp3","size":198658,"mime_type":"audio/mp3"}}'
+  - - 15
+    - 20
+    - German
+    - Chica
+    - ck1nt0@gmail.com
+    - "/vocesLoaded/cache/4ccd68cac404888a8ad1e7930c71ae00.mp4"
+    - 
+    - Prueba total
+    - En proceso
+    - '2018-03-08 05:29:03.942547'
+    - '2018-03-08 05:29:03.959208'
+    - '{"id":"47ec6293ba2f5c1f949dca70de25e6ea.mp4","storage":"store","metadata":{"filename":"Clocks
+      - Coldplay.mp4","size":7074993,"mime_type":"video/mp4"}}'
+  - - 16
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/63ebe39ddff4b6eca01c1b19dceffe41.mp3"
+    - 
+    - ''
+    - En proceso
+    - '2018-03-08 09:43:32.696936'
+    - '2018-03-08 09:43:32.711285'
+    - '{"id":"c57fbbcd31a126760a38481a426d441c.mp3","storage":"store","metadata":{"filename":"Acercate
+      mas.mp3","size":4308568,"mime_type":"audio/mp3"}}'
+  - - 17
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/0e7cbf546cd063f00e894d115b91df24.mp3"
+    - 
+    - ''
+    - En proceso
+    - '2018-03-08 09:47:13.257109'
+    - '2018-03-08 09:47:13.273084'
+    - '{"id":"ebc0c86110f0541ba561356a4ea681ae.mp3","storage":"store","metadata":{"filename":"ADIOS,
+      ADIOS por Leo Marini.mp3","size":2269187,"mime_type":"audio/mp3"}}'
+  - - 18
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/5d5912910f92d50b0e6f0c6b9fb39bea.mp3"
+    - 
+    - ''
+    - En proceso
+    - '2018-03-08 09:50:10.128679'
+    - '2018-03-08 09:50:10.142782'
+    - '{"id":"6ac5edc4dfa99cf42923ba1b61ac7076.mp3","storage":"store","metadata":{"filename":"AMIGO
+      DE QUE por Orlando Contreras.mp3","size":2810444,"mime_type":"audio/mp3"}}'
+  - - 19
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/c28e1a4801cc09aef165a6b59c5235de.mp3"
+    - 
+    - ''
+    - En proceso
+    - '2018-03-08 09:53:42.666525'
+    - '2018-03-08 09:53:42.681072'
+    - '{"id":"fc6159b5c03269ba7affc9bc82ba8435.mp3","storage":"store","metadata":{"filename":"AMOR
+      DE MI VIDA por Leo Marini.mp3","size":2980553,"mime_type":"audio/mp3"}}'
+  - - 20
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/e8cc1da0fb511c405001d08bfb146ef2.mp3"
+    - 
+    - ''
+    - En proceso
+    - '2018-03-08 09:54:55.674804'
+    - '2018-03-08 09:54:55.693867'
+    - '{"id":"c2da0fce8c73c99edefbd7d0939f6545.mp3","storage":"store","metadata":{"filename":"AMOR
+      DE MI VIDA por Leo Marini.mp3","size":2980553,"mime_type":"audio/mp3"}}'
+  - - 21
+    - 17
+    - Carlos
+    - ck1nt0@gmail.com
+    - ''
+    - "/vocesLoaded/cache/0923644ef1be85da87a34f5edf824270.wav"
+    - 
+    - alligator
+    - En proceso
+    - '2018-03-09 01:30:42.952181'
+    - '2018-03-09 01:30:42.963061'
+    - '{"id":"a4f700b499295bebbd9f791a907c16ca.wav","storage":"store","metadata":{"filename":"alligator_3.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 22
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/a43da91509639d11c74ad22ddc007891.mp3"
+    - 
+    - ''
+    - En proceso
+    - '2018-03-10 00:49:02.447675'
+    - '2018-03-10 00:49:02.459220'
+    - '{"id":"a655a713b4a11250966f745e51519252.mp3","storage":"store","metadata":{"filename":"Amorcito
+      corazón.mp3","size":2802544,"mime_type":"audio/mp3"}}'
+  - - 23
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/6b37472804bfe51a152de222f3fdd9ad.wav"
+    - 
+    - Comentarios personales
+    - En proceso
+    - '2018-03-10 13:53:46.449498'
+    - '2018-03-10 13:53:46.462996'
+    - '{"id":"32315d0b68ba3d187413f964fe65a0f7.wav","storage":"store","metadata":{"filename":"_vocesLoaded_cache_0923644ef1be85da87a34f5edf824270.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 24
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/bc8a05fc12310a07be885402a5aa07f4.wav"
+    - 
+    - Comentarios personales
+    - En proceso
+    - '2018-03-10 14:00:48.211927'
+    - '2018-03-10 14:00:48.224215'
+    - '{"id":"a840b353b3a790e65f30c0ff1cd04d3e.wav","storage":"store","metadata":{"filename":"_vocesLoaded_cache_0923644ef1be85da87a34f5edf824270.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 25
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/604c4184118eb444dc4a158c6fb872a6.wav"
+    - 
+    - Comentarios personales
+    - En proceso
+    - '2018-03-10 14:01:22.149888'
+    - '2018-03-10 14:01:22.163715'
+    - '{"id":"20b7f6606a9f7d3c5111b643e2a03777.wav","storage":"store","metadata":{"filename":"_vocesLoaded_cache_0923644ef1be85da87a34f5edf824270.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 26
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/1efde69c31696fdd47c78da1884566cc.wav"
+    - 
+    - 'Comentarios personales:'
+    - En proceso
+    - '2018-03-10 14:07:46.135544'
+    - '2018-03-10 14:07:46.148073'
+    - '{"id":"47f6d300610cdeb405537e21b0e1de29.wav","storage":"store","metadata":{"filename":"_vocesLoaded_cache_0923644ef1be85da87a34f5edf824270.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 27
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/68b8f3d37320f88368021813e2bfb3dd.wav"
+    - 
+    - Comentarios personales
+    - En proceso
+    - '2018-03-10 14:13:03.064526'
+    - '2018-03-10 14:13:03.078989'
+    - '{"id":"2276b4285c54b2b25306ea354fab185b.wav","storage":"store","metadata":{"filename":"_vocesLoaded_cache_0923644ef1be85da87a34f5edf824270.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 28
+    - 20
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/45ee3d1fc9e00cf9a16ab2c84d32309b.wav"
+    - 
+    - Comentarios personales
+    - En proceso
+    - '2018-03-10 14:55:48.478730'
+    - '2018-03-10 14:55:48.492128'
+    - '{"id":"1e5684478f811973cee9df15a076d82a.wav","storage":"store","metadata":{"filename":"1efde69c31696fdd47c78da1884566cc.wav","size":82508,"mime_type":"audio/wav"}}'
+  - - 29
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/03cf2bc4f5c42f610bc3ebf043d35849.wmv"
+    - 
+    - OK
+    - En proceso
+    - '2018-03-10 17:04:31.170002'
+    - '2018-03-10 17:04:31.186236'
+    - '{"id":"49539ed479c87535ca59dfc384c6ff6f.wmv","storage":"store","metadata":{"filename":"EspososHYUNDA.WMV","size":964672,"mime_type":"video/x-ms-wmv"}}'
+  - - 30
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/269d8d137d84127820ccc2b46a27a143.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:07:18.714071'
+    - '2018-03-10 17:07:18.732058'
+    - '{"id":"c4864880eb2eae7e11ad68eadd0027cc.wmv","storage":"store","metadata":{"filename":"Emocosquillas[1].wmv","size":4107515,"mime_type":"video/x-ms-wmv"}}'
+  - - 31
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/78e61efe6c9ec404a4bbaaf592002436.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:09:42.404983'
+    - '2018-03-10 17:09:42.418385'
+    - '{"id":"196ea7d9ee9c847dc256d4ec1bac94e6.wmv","storage":"store","metadata":{"filename":"puño[1].wmv","size":720414,"mime_type":"video/x-ms-wmv"}}'
+  - - 32
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/e697f08765ad62bb5c46f71cf1f6cfa6.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:16:12.887624'
+    - '2018-03-10 17:16:12.906226'
+    - '{"id":"436f74301f2cdd3aca68350b58bd938d.wmv","storage":"store","metadata":{"filename":"Ronaldinho_Sister[1].wmv","size":1510320,"mime_type":"video/x-ms-wmv"}}'
+  - - 33
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/34be77d0eec65272d81ec8eed2d1e1f5.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:16:39.456004'
+    - '2018-03-10 17:16:39.469584'
+    - '{"id":"1a8927f807724b1df5c86053f413ddc2.wmv","storage":"store","metadata":{"filename":"Ronaldinho_Sister[1].wmv","size":1510320,"mime_type":"video/x-ms-wmv"}}'
+  - - 34
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/2cf59d935d540e74a0701b5f6234a4d6.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:19:48.743675'
+    - '2018-03-10 17:19:48.759263'
+    - '{"id":"1108dd96e2ca0605129a55ea38e3a5b0.wmv","storage":"store","metadata":{"filename":"Ronaldinho_Sister[1].wmv","size":1510320,"mime_type":"video/x-ms-wmv"}}'
+  - - 35
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/f66545c7d2c6c9697548322a968926f4.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:23:16.419164'
+    - '2018-03-10 17:23:16.435607'
+    - '{"id":"b54424971f445de775b3b5158e658353.wmv","storage":"store","metadata":{"filename":"Emocosquillas[1].wmv","size":4107515,"mime_type":"video/x-ms-wmv"}}'
+  - - 36
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/f52898c8f1c32b6483c724fb441dcbf7.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:24:17.495726'
+    - '2018-03-10 17:24:17.509270'
+    - '{"id":"04fd5f4e10918ea567317e55f753cf28.wmv","storage":"store","metadata":{"filename":"puño[1].wmv","size":720414,"mime_type":"video/x-ms-wmv"}}'
+  - - 37
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/35a34689aad4621fac70ff4224fd9d9b.mp4"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:26:09.933819'
+    - '2018-03-10 17:26:09.955118'
+    - '{"id":"3f6038087852b162a92067a3d74fd05b.mp4","storage":"store","metadata":{"filename":"Clocks
+      - Coldplay.mp4","size":7074993,"mime_type":"video/mp4"}}'
+  - - 38
+    - 17
+    - German
+    - Chica
+    - gchicaduque@gmail.com
+    - "/vocesLoaded/cache/f50f3fcf8a68537d7d48a790025ade48.wmv"
+    - 
+    - ok
+    - En proceso
+    - '2018-03-10 17:27:24.150216'
+    - '2018-03-10 17:27:24.166029'
+    - '{"id":"f1a70ae3e8c0fa9aee1191540b9040b8.wmv","storage":"store","metadata":{"filename":"EspososHYUNDA.WMV","size":964672,"mime_type":"video/x-ms-wmv"}}'

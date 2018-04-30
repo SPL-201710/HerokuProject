@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Concurso de voces Uniandes</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Template styles -->
+    <style rel="stylesheet">
+        /* TEMPLATE STYLES */
+
+        /* Necessary for full page carousel*/
+
+        html,
+        body,
+        .view {
+            height: 100%;
+        }
+
+        /* Navigation*/
+
+        .navbar {
+            background-color: transparent;
+        }
+
+        .scrolling-navbar {
+            -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+            transition: background .5s ease-in-out, padding .5s ease-in-out;
+        }
+
+        .top-nav-collapse {
+            background-color: #1C2331;
+        }
+
+        footer.page-footer {
+            background-color: #1C2331;
+            margin-top: 0;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .navbar {
+                background-color: #1C2331;
+            }
+            .display-3 {
+                font-size: 2rem;
+                margin-top: 6rem;
+            }
+            h3 {
+                font-size: 1rem;
+            }
+        }
+
+        @media only screen and (max-width: 667px) {
+            .display-3 {
+                font-size: 3rem;
+            }
+        }
+
+        /* Carousel*/
+        .carousel,
+        .carousel-item,
+        .active {
+            height: 100%;
+        }
+
+        .carousel-inner {
+            height: 100%;
+        }
+
+        /*Caption*/
+
+        .flex-center {
+            color: #fff;
+        }
+
+        @media (min-width: 776px) {
+            .carousel .view ul li {
+                display: inline;
+            }
+            .carousel .view .full-bg-img ul li .flex-item {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        .navbar .btn-group .dropdown-menu a:hover {
+            color: #000 !important;
+        }
+
+        .navbar .btn-group .dropdown-menu a:active {
+            color: #fff !important;
+        }
+    </style>
+    
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    </div>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="background-color: #181818">
+        <div class="container">
+            <% if params[:concursoURL] == nil %>
+            <a class="navbar-brand" href="/">
+                <strong>PubliVoz</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/concursos">Concursos activos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">El equipo</a>
+                    </li>
+
+                </ul>
+                <ul class="navbar-nav" style="text-align: height;">
+                      <% if administrator_signed_in? %>
+                        
+                            <%= link_to 'Salir', destroy_administrator_session_path, method: :delete, class:"nav-link" %>
+                        
+                      <% else %>
+                        
+                            <%= link_to 'Entrar', new_administrator_session_path,class:"nav-link" %>
+                            <%= link_to 'Registrarme', new_administrator_registration_path,class:"nav-link" %>
+                       
+                      <% end %>
+                </ul>
+            </div>
+            <% else %>
+            <a class="navbar-brand" href="/">
+                <strong>PubliVoz</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">El equipo</a>
+                    </li>
+                </ul>
+            <% end %>
+        </div>
+    </nav>
+    <!--/.Navbar-->
+    
+    
+    <!--
+    <ul class="nav justify-content-end">
+      <%- if administrator_signed_in? %>
+        <li class="nav-item">
+          <%= link_to 'salir', destroy_administrator_session_path, method: :delete%>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to 'Entrar', new_administrator_session_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Registrarme', new_administrator_registration_path %>
+        </li>
+      <% end %>
+    </ul>
+    <div class="container">
+    <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+       -->
+    <%= yield %>
+    </div>
+    
+    <!--Footer-->
+    <footer class="page-footer center-on-small-only unique-color-dark">
+
+
+        <!--Footer Links-->
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row">
+
+                <!--First column-->
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-r">
+                    <h6 class="title font-bold">
+                        <strong>PubliVoz</strong>
+                    </h6>
+                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>Si busca una nueva forma de poder contar con la voz para su evento o publicidad, aquí la puede encontrar.
+                    O por el contrario, usted puede aplicar a los concursos atractivos.</p>
+                </div>
+                <!--/.First column-->
+
+                <!--Second column-->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-r">
+                    <h6 class="title font-bold">
+                        <strong>Productos</strong>
+                    </h6>
+                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Proyecto 1</a>
+                    </p>
+                    <p>
+                        <a href="#!">Proyecto 2</a>
+                    </p>
+                    <p>
+                        <a href="#!">Proyecto 3</a>
+                    </p>
+                    <p>
+                        <a href="#!">Proyecto 4</a>
+                    </p>
+                </div>
+                <!--/.Second column-->
+
+                <!--Third column-->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-r">
+                    <h6 class="title font-bold">
+                        <strong>Accesos del portal</strong>
+                    </h6>
+                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <a href="#!">Nosotros</a>
+                    </p>
+                    <% if params[:concursoURL] == nil %>
+                    <p>
+                        <a href="/concursos">Concursos activos</a>
+                    </p>
+                     <% end %>
+                    <p>
+                        <a href="#!">El equipo</a>
+                    </p>
+                </div>
+                <!--/.Third column-->
+
+                <!--Fourth column-->
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="title font-bold">
+                        <strong>Contácto</strong>
+                    </h6>
+                    <hr class="blue mb-4 pb-1 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p>
+                        <i class="fa fa-home mr-3"></i> Bogotá D.C., Colombia 2018</p>
+                    <p>
+                        <i class="fa fa-envelope mr-3"></i>wh.montero10@uniandes...</p>
+                    
+                </div>
+                <!--/.Fourth column-->
+
+            </div>
+        </div>
+        <!--/.Footer Links-->
+
+        <!-- Copyright-->
+        <div class="footer-copyright">
+            <div class="container-fluid">
+                © 2018 Copyright:
+                <a href="https://www.uniandes.edu.co">
+                    <strong> Universidad de los Andes</strong>
+                </a>
+            </div>
+        </div>
+        <!--/.Copyright -->
+
+    </footer>
+    <!--/.Footer-->
+    
+  </body>
+</html>

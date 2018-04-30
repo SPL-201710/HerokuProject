@@ -1,0 +1,102 @@
+<% if administrator_signed_in?  %>
+  <br><br><br><br>
+<div class="container">
+  <!-- Project One -->
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src=<%=@concursos.image_url%> alt=""width="520" height= "260">
+          </a>
+        </div>
+        <div class="col-lg-7">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.2s">
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title"><%= @concursos.nombreConcurso %></h4>
+                        <!--Text-->
+                          <p><b>URL: </b><%= link_to @concursos.concursoURL, "/homeConcursos?concursoURL="+@concursos.concursoURL %></p>
+                          <p><b>Guion: </b><%= @concursos.guionConcurso %></p>
+                          <p><b>Recomendaciones: </b><%= @concursos.recomendaciones %></p>
+                          <p><b>Fecha inicial: </b><%= @concursos.fechaInicio.to_date %></p>
+                          <p><b>Fecha final: </b><%= @concursos.fechaFin.to_date %></p>
+                          <p><b>Valor a pagar: </b><%= @concursos.valorPagar %></p>
+                          <%= link_to 'Editar', edit_concurso_path(@concursos.id), class:"btn btn-primary" %>
+                          <a href="/concursos" class="btn btn-default">Inicio</a>
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
+      <br><br><hr>
+      <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4"><b>Voces inscritas</b></h2>
+        </div>
+          <%# @vocess_locutors.each do |vocess_locutor| %>
+              <!-- #vocess_locutor.concurso.nombreConcurso -->
+              <div class="col-lg-4 col-sm-6 text-center mb-4">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="https://lh3.googleusercontent.com/Vx5HMEX6z0AL0eOn_73ECPs7dcJ1t6wWZAecJtTVfYt_qvE_aXdwRj_NgCMEqnTmnQ=w300" width="100px" alt="">
+                  <h3><%=# vocess_locutor.nombresLocutor %> <%=# vocess_locutor.apellidosLocutor %>
+                  <small><%=# vocess_locutor.emailLocutor %></small>
+                  </h3>
+                   <%=# vocess_locutor.created_at %>
+                   <p>Estado de la solicitud: <%=# vocess_locutor.estado %></p>
+                <%# if vocess_locutor.originalURL != nil  %>
+                    <%=# link_to vocess_locutor.originalURL[-36,36], vocess_locutor.originalURL, download: vocess_locutor.originalURL  %>
+                <%# end %>
+                <%# if vocess_locutor.convertidaURL != nil  %>
+                    <!-- convertidaURL -->
+		     <p><%=#audio_tag(["#{vocess_locutor.convertidaURL}"], :size => "340x30", :controls => true) %></p>
+                <%# end %>
+              </div>
+              <%# end %>
+    </div>
+        <div style="margin-left:auto;margin-right:auto;text-align:center"><%=# will_paginate @vocess_locutors %></div>
+    </div>
+ 
+<% else %>
+<!--Carousel Wrapper-->
+    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
+            <!--<li data-target="#carousel-example-3" data-slide-to="1"></li>
+            <li data-target="#carousel-example-3" data-slide-to="2"></li>-->
+        </ol>
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- First slide -->
+            <div class="carousel-item active view hm-black-light" style="background-image: url('https://www.voices.com/blog/wp-content/uploads/2017/05/Forgetting-The-Microphone-blue-background-solitary-mic.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeInUp col-md-12">
+                        <li>
+                            <h1 class="display-3 flex-item font-bold">Un evento, muchas voces.</h1>
+                            <li>
+                                <h3 class="flex-item">Escúchalas y escoge entre las mejores. </h3>
+                            </li>
+                            <li>
+                              
+                              <%= link_to '¡ Empecemos !', new_administrator_session_path,class:"btn btn-primary btn-lg flex-item" %>
+                              <%= link_to '¿Eres nuevo?', new_administrator_registration_path,class:"btn btn-outline-white btn-lg flex-item" %>
+
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+
+            </div>
+            <!-- /.First slide -->
+
+        </div>
+        <!--/.Slides-->
+       
+    </div>
+ <% end %>

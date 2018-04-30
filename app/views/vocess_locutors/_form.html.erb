@@ -1,0 +1,47 @@
+<div class="container">
+ <div class="col-lg-12">
+<%= form_with(model: [@concursos, @vocess_locutor_new], local: true) do |f| %>
+  <% if @vocess_locutor_new.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vocess_locutors_new.errors.count, "error") %> prohibited this vocess_locutor from being saved:</h2>
+
+      <ul>
+      <% @vocess_locutor_new.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="col-lg-6">
+    <%= f.label :nombresLocutor, 'Nombres: ', class:"sr-only" %><br />
+    <%= f.text_field :nombresLocutor, autofocus: true, placeholder: "Ingrese los nombres ...", required: true %>	
+  </div>
+  
+  <div class="col-lg-6">
+    <%= f.label :apellidosLocutor, 'Apellidos: ', class:"sr-only" %><br />
+    <%= f.text_field :apellidosLocutor, autofocus: true, placeholder: "Ingrese los apellidos ...", required: true %>
+  </div>
+  
+ <div class="col-lg-6">
+    <%= f.label :emailLocutor, 'Correo electrónico: ', class:"sr-only" %><br />
+    <%= f.email_field :emailLocutor, autofocus: true, autocomplete: "email", placeholder: "Ingrese el correo electrónico ...", required: true %>
+  </div>
+  <br>
+  <div class="col-lg-6">
+    <%= f.label :voz, 'Archivo de voz: ' %><br>
+    <%= f.hidden_field :voz, value: @vocess_locutor_new.cached_voz_data %>
+    <%= f.file_field :voz, :required => true, required: true %>
+  </div>
+  <br>
+  <div class="col-lg-12">
+    <%= f.label :comentarios, 'Comentarios personales: '%><br />
+    <%= f.text_area :comentarios, autofocus: true, placeholder: "Ingrese un comentario u observación sobre la voz enviada...", size: "24x6", required: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Enviar voz', :class=>'btn btn-danger' %>
+  </div>
+</div>
+</div>
+<% end %>

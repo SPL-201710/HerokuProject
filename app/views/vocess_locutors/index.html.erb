@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vocess Locutors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Concurso</th>
+      <th>Nombreslocutor</th>
+      <th>Apellidoslocutor</th>
+      <th>Emaillocutor</th>
+      <th>Originalurl</th>
+      <th>Convertidaurl</th>
+      <th>Comentarios</th>
+      <th>Estado</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vocess_locutors.each do |vocess_locutor| %>
+      <tr>
+        <td><%= vocess_locutor.concurso %></td>
+        <td><%= vocess_locutor.nombresLocutor %></td>
+        <td><%= vocess_locutor.apellidosLocutor %></td>
+        <td><%= vocess_locutor.emailLocutor %></td>
+        <td><%= vocess_locutor.originalURL %></td>
+        <td><%= vocess_locutor.convertidaURL %></td>
+        <td><%= vocess_locutor.comentarios %></td>
+        <td><%= vocess_locutor.estado %></td>
+        <td><%= link_to 'Show', vocess_locutor %></td>
+        <td><%= link_to 'Edit', edit_vocess_locutor_path(vocess_locutor) %></td>
+        <td><%= link_to 'Destroy', vocess_locutor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vocess Locutor', new_vocess_locutor_path %>

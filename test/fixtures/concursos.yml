@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombreConcurso: MyString
+  fechaInicio: 2018-02-27 02:57:15
+  fechaFin: 2018-02-27 02:57:15
+  valorPagar: 1
+  recomendaciones: MyText
+  guionConcurso: MyText
+  imageBanner: MyString
+  concursoURL: MyString
+
+two:
+  nombreConcurso: MyString
+  fechaInicio: 2018-02-27 02:57:15
+  fechaFin: 2018-02-27 02:57:15
+  valorPagar: 1
+  recomendaciones: MyText
+  guionConcurso: MyText
+  imageBanner: MyString
+  concursoURL: MyString

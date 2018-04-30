@@ -1,0 +1,63 @@
+<br><br><br><br>
+<div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+<div class="container">
+  <!-- Project One -->
+      <div class="row">
+        <div class="col-md-5">
+          <a href="#">
+            <img class="img-fluid rounded mb-3 mb-md-0" src=<%= @concursos.imageBanner.first(@concursos.imageBanner.index('?'))%> alt=""width="520" height= "260">
+          </a>
+        </div>
+        <div class="col-lg-7">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.2s">
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title"><%= @concursos.nombreConcurso %></h4>
+                        <!--Text-->
+                          <p><b>URL: </b><%= link_to @concursos.concursoURL, "/homeConcursos?concursoURL="+@concursos.concursoURL %></p>
+                          <p><b>Guion: </b><%= @concursos.guionConcurso %></p>
+                          <p><b>Recomendaciones: </b><%= @concursos.recomendaciones %></p>
+                          <p><b>Fecha inicial: </b><%= @concursos.fechaInicio.to_date %></p>
+                          <p><b>Fecha final: </b><%= @concursos.fechaFin.to_date %></p>
+                          <p><b>Valor a pagar: </b><%= @concursos.valorPagar %></p>
+                    </div>
+                </div>
+                <!--/.Card-->
+	</div>
+      <br><br><hr>
+      <!-- /.row -->
+      <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+          <h2 class="my-4"><b>Voces inscritas</b></h2>
+        </div>
+          <% @vocess_locutors.each do |vocess_locutor| %>
+              <!-- #vocess_locutor.concurso.nombreConcurso -->
+              <div class="col-lg-4 col-sm-6 text-center mb-4">
+                <img class="rounded-circle img-fluid d-block mx-auto" src="https://lh3.googleusercontent.com/Vx5HMEX6z0AL0eOn_73ECPs7dcJ1t6wWZAecJtTVfYt_qvE_aXdwRj_NgCMEqnTmnQ=w300" width="100px" alt="">
+                  <p><%= vocess_locutor.nombresLocutor %> </p><p><%= vocess_locutor.apellidosLocutor %></p>
+                  <small><%= vocess_locutor.emailLocutor %></small>
+                   <%= vocess_locutor.created_at %>
+                   <% if vocess_locutor.convertidaURL != nil  %>
+                    	<p><%=audio_tag(["#{vocess_locutor.convertidaURL}"], :size => "340x30", :controls => true, :download => false) %></p>
+                  <% end %>
+              </div>
+              <% end %>
+      </div>
+      <!--  <div style="margin-left:auto;margin-right:auto;text-align:center"><#%= will_paginate @vocess_locutors %></div>-->
+    </div>
+<hr>
+<div class="container">
+  <h3>  &nbsp;  &nbsp; Ingresar tu voz</h3>
+     <%= render "vocess_locutors/form"%>
+    <ul>
+        
+    </ul>
+</div>
+

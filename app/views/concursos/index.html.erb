@@ -1,0 +1,87 @@
+<% if administrator_signed_in? %>
+<br><br><br><br>
+<div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+<div class="container">
+  <h2>Listado de tus concursos</h2>
+  <p>Aquí puedes administrar tus concursos.</p>
+  <div>
+  	<button type="button" class="btn btn-yellow" onclick="javascript: document.location = '/concursos/new' ">Nuevo</button>
+  </div>
+<div class="row my-5 py-4" style="padding: 0px 30px 0px 20px">
+        <%- @concursos.items.each do |concursos| %>
+            <!--First columnn-->
+            <div class="col-lg-4">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.2s">
+                    <!--Card image-->
+                    <%#= image_tag concursos.imageBanner.thumb.url %>
+		    <center><img class="img-fluid" src=<%=concursos["imageBanner"].first(concursos["imageBanner"].index('?'))%> alt="" width="260" height= "130"> </center>
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title"><%= concursos["nombreConcurso"] %></h4>
+                        <!--Text-->
+                            <b>URL:</b>  <%= link_to concursos["concursoURL"], "/homeConcursos?concursoURL="+concursos["concursoURL"] %><br>
+                            <b>Periodo:</b>  <%= concursos["fechaInicio"].to_date %> -  <%= concursos["fechaFin"].to_date %><br>
+                            <b>Valor a pagar:</b> $<%= concursos["valorPagar"] %><br><br>
+                        <%= link_to 'Detalle', concurso_path(concursos["id"]), class:"font-bold" %>
+                        | 
+                        <%= link_to 'Editar', edit_concurso_path(concursos["id"]), class:"font-bold" %>
+                        | 
+                        <%= link_to 'Borrar', "concursos/" + concursos["id"], method: :delete, data: { confirm: 'Esta Seguro?' }  %>
+                    </div>
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--First columnn-->
+        <% end %>
+    </div>
+<!--</div>-->
+<% else %>
+<!--Carousel Wrapper-->
+    <div id="carousel-example-3" class="carousel slide carousel-fade white-text" data-ride="carousel" data-interval="false">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-3" data-slide-to="0" class="active"></li>
+            <!--<li data-target="#carousel-example-3" data-slide-to="1"></li>
+            <li data-target="#carousel-example-3" data-slide-to="2"></li>-->
+        </ol>
+        <!--/.Indicators-->
+
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+
+            <!-- First slide -->
+            <div class="carousel-item active view hm-black-light" style="background-image: url('https://www.voices.com/blog/wp-content/uploads/2017/05/Forgetting-The-Microphone-blue-background-solitary-mic.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+                <!-- Caption -->
+                <div class="full-bg-img flex-center white-text">
+                    <ul class="animated fadeInUp col-md-12">
+                        <li>
+                            <h1 class="display-3 flex-item font-bold">Un evento, muchas voces.</h1>
+                            <li>
+                                <h3 class="flex-item">Escúchalas y escoge entre las mejores. </h3>
+                            </li>
+                            <li>
+                              
+                              <%= link_to '¡ Empecemos !', new_administrator_session_path,class:"btn btn-primary btn-lg flex-item" %>
+                              <%= link_to '¿Eres nuevo?', new_administrator_registration_path,class:"btn btn-outline-white btn-lg flex-item" %>
+
+                            </li>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.Caption -->
+
+            </div>
+            <!-- /.First slide -->
+
+        </div>
+        <!--/.Slides-->
+       
+    </div>
+ <% end %>

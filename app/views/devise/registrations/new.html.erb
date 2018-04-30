@@ -1,0 +1,86 @@
+<div><br><br></div>
+
+<div class="container">
+        <!--Section: Blog v.1-->
+        <section class="section pb-3 text-center text-lg-left">
+
+            <!--Section heading-->
+            <h1 class="section-heading h1 dark-grey-text text-center mt-5 pt-lg-3">Formulario de registro</h1>
+            <hr>
+            <!--Section description-->
+            <p class="section-description mb-5 mt-lg-5 mx-lg-5 text-center">Por favor ingrese la información en cada campo, de ésta manera
+            usted puede crear un perfil y empezar a crear los concursos.</p>
+
+            <!--Grid row-->
+            <div class="row pt-lg-5">
+
+                <!--Grid column-->
+                <div class="col-lg-12 col-xl-12">
+                    <!--Excerpt-->
+                    <a href="" class="cyan-text">
+                        <h6 class="font-bold pb-1">
+                            <i class="fa fa-address-book"></i> Formulario</h6>
+                    </a>
+                    <h4 class="mb-4 font-bold dark-grey-text">
+                        <strong>Todos los campos son requeridos.</strong>
+                    </h4>
+                    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+                    <%= devise_error_messages! %>
+                  
+                    <div class="field">
+                      <%= f.label :Nombres, class:"sr-only" %><br />
+                      <%= f.text_field :nombres, autofocus: true, placeholder: "Ingrese los nombres ..." %>
+                      
+                    </div>
+                    
+                    <div class="field">
+                      <%= f.label :Apellidos, class:"sr-only" %><br />
+                      <%= f.text_field :apellidos, autofocus: true, placeholder: "Ingrese los apellidos ..." %>
+                    </div>
+                    
+                    <div class="field">
+                      <%= f.label :'Nombre de la Empresa', class:"sr-only" %><br />
+                      <%= f.text_field :nombreEmpresa, autofocus: true, placeholder: "Ingrese el nombre de la empresa ..." %>
+                    </div>
+                    
+                    <div class="field">
+                      <%= f.label :email, class:"sr-only" %><br />
+                      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Ingrese el correo electrònico ..." %>
+                    </div>
+                    
+                    <div class="field">
+                      <br><br>
+                      <% if @minimum_password_length %>
+                        <em>Recuerde que la clave debe contener mínimo (<%= @minimum_password_length %>) caracteres.</em>
+                      <% end %><br /><br>
+                    </div>
+                    
+                    <div class="field">
+                      <%= f.label :password, class:"sr-only" %>
+                      <%= f.password_field :password, autocomplete: "off", placeholder: "Ingrese la clave ..." %>
+                    </div>
+                  
+                    <div class="field">
+                      <%= f.label :password_confirmation, class:"sr-only" %><br />
+                      <%= f.password_field :password_confirmation, autocomplete: "off",  placeholder: "Ingrese la clave nuevamente ..." %>
+                    </div>
+                  
+                    <div class="actions">
+                      <br><br>
+                      <%= f.submit "Enviar", class:"btn btn-primary btn-lg flex-item" %>
+                    </div>
+                  <% end %><%= render "devise/shared/links" %>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Section: Blog v.1-->
+
+    </div>
+
+
+
+
